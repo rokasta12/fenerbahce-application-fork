@@ -1,9 +1,9 @@
 type NodeEnv = "development" | "local" | "production";
 
 const envs = {
-    development: "config/.env.development",
-    local: "config/.env.local",
-    production: "config/.env",
+    development: ".env.development",
+    local: ".env.local",
+    production: ".env",
 };
 
 const getNodeEnv = (): NodeEnv => {
