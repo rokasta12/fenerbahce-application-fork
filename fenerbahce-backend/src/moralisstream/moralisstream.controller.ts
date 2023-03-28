@@ -12,14 +12,14 @@ export class MoralisStreamController {
     ) {}
 
     onModuleInit() {
-        const apikey = this.configService.get("MORALIS_API_KEY");
-        if (!apikey) {
-            throw new Error("MORALIS_API_KEY is not defined");
-        }
+        // const apikey = this.configService.get("MORALIS_API_KEY");
+        // if (!apikey) {
+        //     throw new Error("MORALIS_API_KEY is not defined");
+        // }
 
-        Moralis.start({
-            apiKey: apikey,
-        });
+        // Moralis.start({
+        //     apiKey: apikey,
+        // });
     }
 
     @Get("/webhook")

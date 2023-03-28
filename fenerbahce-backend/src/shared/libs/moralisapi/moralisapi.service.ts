@@ -10,12 +10,12 @@ export class MoralisAPIService {
     constructor(private readonly configService: ConfigService) {
         const NodeEnv = this.configService.get("NODE_ENV");
         if (NodeEnv === "production") {
-            const configs = {
-                appId: this.configService.get("MORALIS_APP_ID"),
-                serverUrl: this.configService.get("MORALIS_SERVER_URL"),
-                masterKey: this.configService.get("MORALIS_MASTER_KEY"),
-            };
-            Moralis.start(configs);
+            // const configs = {
+            //     appId: this.configService.get("MORALIS_APP_ID"),
+            //     serverUrl: this.configService.get("MORALIS_SERVER_URL"),
+            //     masterKey: this.configService.get("MORALIS_MASTER_KEY"),
+            // };
+            // Moralis.start(configs);
         }
     }
 
