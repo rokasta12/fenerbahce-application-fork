@@ -1,12 +1,12 @@
 import { useMemo } from "react";
-import { localChain, mainnetChain, testnetChain } from "~/constants";
-import { IChain } from "~/interfaces";
+import { mainnetChain, testnetChain } from "~/constants";
+import type { IChain } from "~/interfaces";
 import { switchToNetwork, checkIfIsCorrectNetwork } from "~/utils";
 
 export const useChainConfig = () => {
 	const chainConfig: IChain = useMemo(() => {
 		if (config.NODE_ENV === "development") {
-			return localChain;
+			return testnetChain; /* localChain */
 		} else if (config.NODE_ENV === "test") {
 			return testnetChain;
 		}
